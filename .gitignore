@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# Streamlit
+.streamlit/
+
+# Temporary and Debug files
+debug.py
+dummy.pdf
+*.log
