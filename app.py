@@ -9,6 +9,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Custom CSS for a more premium look
 st.markdown("""
 <style>
     .block-container {
@@ -21,6 +22,21 @@ st.markdown("""
     .stTabs [data-baseweb="tab"] {
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+    .premium-title {
+        background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3.2rem !important;
+        font-weight: 800 !important;
+        padding-bottom: 0.5rem;
+    }
+    .premium-subtitle {
+        font-size: 1.15rem;
+        color: #8892b0;
+        font-weight: 400;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -85,8 +101,8 @@ with st.sidebar:
         else:
             st.warning("Please upload a PDF first.")
 
-st.title("AI Research Paper Assistant")
-st.write("An advanced tool to summarize research papers quickly using parallel processing and Gemini 2.5 Flash.")
+st.markdown('<h1 class="premium-title">📚 AI Research Assistant</h1>', unsafe_allow_html=True)
+st.markdown('<p class="premium-subtitle">Elevate your research workflow. Instantly generate comprehensive structured insights and interact dynamically with any academic paper.</p>', unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["Summary Report", "Chat with Paper"])
 
